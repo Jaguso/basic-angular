@@ -10,6 +10,8 @@ import {Component} from 'angular2/core';
         <br>
         Is it awesome?
         <input type="text" #inputElement (keyup)="0">
+        <br><br>
+        <button [disabled]="inputElement.value !== 'yes'">Only enabled if 'yes' was entered</button>
     `,
     styleUrls: ['src/css/mycomponent.css']
 })
