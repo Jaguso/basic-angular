@@ -1,6 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import { TestComponent } from './test.component';
-
+import {OnInit} from "angular2/core";
 
 @Component({
     selector: 'my-component',
@@ -18,6 +18,11 @@ import { TestComponent } from './test.component';
     styleUrls: ['src/css/mycomponent.css'],
     directives: [TestComponent]
 })
-export class MyComponentComponent {
-    name = 'Maxwell';
+export class MyComponentComponent implements OnInit {
+    name: string;
+
+    ngOnInit():any {
+        this.name = "Maxwell";
+    }
+    
 }
